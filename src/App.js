@@ -5,7 +5,6 @@ import Result from './components/Result';
 import {bodyData, eyesData, eyebrowsData, hairData, mouthsData, noseData, hatsData, clothesData, totalDataArray, getInitialState} from './components/utils/Data'
 
 getInitialState(totalDataArray);
-console.log(totalDataArray)
 
 function App() {
   const [customizeResult, setCustomizeResult] = useState(getInitialState(totalDataArray));
