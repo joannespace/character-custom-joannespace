@@ -1,0 +1,189 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: sans-serif;
+  background-image: url('https://wallpapercave.com/wp/wp4918712.jpg');
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: Copperplate, fantasy;
+  font-weight: bolder;
+  font-size: 50px;
+  color: green;
+  text-shadow: yellow 1px 0 5px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.subtitle {
+  font-family: Copperplate, fantasy;
+  font-weight: bolder;
+  font-size: 30px;
+  color: yellow;
+  text-shadow: green 1px 0 5px;
+  text-align: center;
+}
+
+.divider {
+  border: green dashed 2px;
+  width: 50%;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 2rem;
+  width: 100%; 
+}
+
+/* RENDERING RESULT */
+#char-display {
+  width: 17rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  left: 2rem;
+  align-items: center;
+  border: green solid 4px;
+  border-radius: 15px;
+  background-color: rgb(238, 238, 117);
+  position: fixed;
+}
+
+#char-display img {
+  width: 12rem;
+  padding-top: 2rem;
+  position: absolute;
+}
+
+.body, .mouths, .nose {
+  z-index: 1;
+}
+
+.eyes {
+  z-index: 2;
+}
+
+.eyebrows {
+  z-index: 3;
+}
+
+.clothes {
+  z-index: 4;
+}
+
+.hair {
+  z-index: 5;
+}
+
+.hats {
+  z-index: 6;
+}
+
+.random-btn {
+  background-color: red;
+  border: green solid 1px;
+  border-radius: 5px;
+  box-shadow: grey 1px 0.5px 0.5px;
+  padding: 5px;
+  color: white;
+  font-weight: bolder;
+  width: 8rem;
+  bottom: 2rem;
+  position: absolute;
+}
+
+.random-btn:hover {
+  border: green solid 2px;
+  background-image: linear-gradient(yellow, green);
+  color: black;
+  opacity: 0.5;
+}
+
+/* CATEGORY BOX */
+#adjust-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%;
+  height: 100%;
+}
+
+.decor-box {
+  border: green dashed 1px;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: rgb(223, 223, 202);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+label {
+  padding-bottom: 5px;
+  text-align: center;
+  text-shadow: grey 1px 0.5px 0.5px;
+  color: green;
+  font-weight: bolder;
+  font-family: Copperplate, fantasy;
+  font-size: larger;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input {
+  border: green solid 1px;
+  padding: 0.1rem;
+  border-radius: 5px;
+  width: 3rem;
+  margin: 0.5rem 0.2rem;
+}
+
+input:hover  {
+  background-color: green;
+  opacity: 0.6;
+}
+
+.choosen {
+  background-color: green;
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 870px) {
+  #container {
+    align-items: center; 
+    padding: 2rem 0.5rem;
+  }
+
+  #char-display {
+    position: relative;
+    left: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  #adjust-box {
+    width: 80%;
+  }
+
+  .item-list {
+    justify-content: center;
+  }
+}
